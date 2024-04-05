@@ -2,18 +2,16 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+# << Chicken Chase >>
+## CS110 Final Project  << Fall 2024 >>
 
 ## Team Members
-
-<< List team member names >>
+Valeria Velez
 
 ***
 
 ## Project Description
-
-<< Give an overview of your project >>
+You are a chicken, and you are trying to escape Chick-fil-a by running as far away as you can. You have to run away from the employee, dodging different obstacles to get as far away from the restaurant as you can.
 
 ***    
 
@@ -31,11 +29,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. Jump
+2. Scrolling Background 
+3. Obstacle Collision
+4. Game Over Screen
+5. High Score
 
 ### Classes
 
