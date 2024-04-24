@@ -18,4 +18,19 @@ class Chicken:
         self.step_index=0
         self.jump_vel=self.jump_velocity
         self.img= self.run_img[0]
+        self.chicken_rect.x=self.x_pos
+        self.chicken_rect.y=self.y_pos
         
+        def update(self, userInput):
+            if self.chicken_run:
+                self.run()
+            if self.chicken_jump:
+                self.jump()
+            if self.step_indec>=10:
+                self.step_index=0
+                
+            if userInput(pygame.K_UP) and not self.chicken_jump:
+                self.chicken_run=False
+                self.chicken_jump=True 
+                
+                        
