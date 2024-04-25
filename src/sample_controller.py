@@ -1,8 +1,9 @@
 import pygame
 import os
+from src.chicken import Chicken
 class Controller:
   def mainloop(self):
-    from chicken import Chicken 
+    from src.chicken import Chicken
     player=Chicken()
     screen_height= 600
     screen_width=1100
@@ -14,19 +15,20 @@ class Controller:
         for event in pygame.event.get():
           if event.type==pygame.QUIT:
             run=False
-        screen.fill(255,255,255)
+        screen.fill((255,255,255))
         userinput=pygame.key.get_pressed()
         player.draw(screen)
         player.update(userinput)
         clock.tick(30)
-        pygame.display.update()
+        pygame.display.update()       
+
   def __init__(self):
-      
+    pass
   
   ### below are some sample loop states ###
 
   def menuloop(self):
-    
+    pass
       #event loop
 
       #update data
@@ -34,6 +36,7 @@ class Controller:
       #redraw
       
   def gameloop(self):
+    pass
       #event loop
 
       #update data
@@ -41,6 +44,7 @@ class Controller:
       #redraw
     
   def gameoverloop(self):
+    pass
       #event loop
 
       #update data
