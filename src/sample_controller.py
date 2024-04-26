@@ -3,6 +3,8 @@ import os
 from src.chicken import Chicken
 class Controller:
   def mainloop(self):
+    clock=pygame.time.Clock()
+    clock.tick(20)
     from src.chicken import Chicken
     player=Chicken()
     screen_height= 600
