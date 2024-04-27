@@ -6,7 +6,7 @@ class Chicken:
     jump_velocity=8.5
     def __init__(self):
         running= [pygame.image.load(os.path.join("assets/pictures/chicken", "run1.png")), pygame.image.load(os.path.join("assets/pictures/chicken", "run2.png")), pygame.image.load(os.path.join("assets/pictures/chicken", "run3.png"))]
-        jumping= [pygame.image.load(os.path.join("assets/pictures/chicken", "jump1.png")), pygame.image.load(os.path.join("assets/pictures/chicken", "jump2.png")), pygame.image.load(os.path.join("assets/pictures/chicken", "jump3.png"))]
+        jumping= [pygame.image.load(os.path.join("assets/pictures/chicken", "jump3.png"))]
         death= [pygame.image.load(os.path.join("assets/pictures/chicken", "death.png"))]
         self.run_img= running
         self.jump_img= jumping
@@ -51,7 +51,7 @@ class Chicken:
             self.img=self.run_img[self.step_index]
             self.step_index=(self.step_index+1)%len(self.run_img)
     def jump(self):
-        self.img= self.jump_img[self.step_index] 
+        self.img= self.jump_img[0] 
         if self.chicken_jump:
             self.chicken_rect.y-=self.jump_vel*4
             self.jump_vel-=0.8
@@ -59,7 +59,7 @@ class Chicken:
             self.chicken_jump=False
             self.jump_vel=self.jump_velocity 
         if self.frame_counter%100==0:
-            self.img=self.jump_img[self.step_index]
+            self.img=self.jump_img[0]
             self.step_index=(self.step_index+3)%len(self.run_img) 
     def draw(self, screen):
         screen.blit(self.img, (self.chicken_rect.x, self.chicken_rect.y))

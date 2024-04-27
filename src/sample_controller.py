@@ -1,14 +1,22 @@
 import pygame
 import os
 from src.chicken import Chicken
+from src.cloud import Cloud 
+from src.background import Background
+from src.score import Score 
 class Controller:
   def mainloop(self):
-    clock=pygame.time.Clock()
-    clock.tick(20)
-    from src.chicken import Chicken
+    global game_speed, points
+    background=Background()
+    cloud=Cloud()
     player=Chicken()
-    screen_height= 600
+    score=Score()
+    screen_height= 500
     screen_width=1100
+    game_speed=14
+    
+    points=0
+    
     screen=pygame.display.set_mode((screen_width, screen_height))
     run=True
     while run:
@@ -19,9 +27,14 @@ class Controller:
             run=False
         screen.fill((255,255,255))
         userinput=pygame.key.get_pressed()
+        background.draw(screen)
+        cloud.draw(screen)
+        cloud.update()
+        clock.tick(30)
+        score.draw(screen)
+        score.update()
         player.draw(screen)
         player.update(userinput)
-        clock.tick(30)
         pygame.display.update()       
 
   def __init__(self):
