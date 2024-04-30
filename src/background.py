@@ -7,7 +7,6 @@ class Background:
     x_pos_bg=0
     x_pos_bg2=background.get_width()
     y_pos_bg=0
-    global x_pos_bg, x_pos_bg2, y_pos_bg
     @classmethod
     def draw(cls, screen):
         width= cls.background.get_width()
