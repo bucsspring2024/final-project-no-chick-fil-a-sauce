@@ -120,31 +120,3 @@ class Controller:
           if event.type==pygame.KEYDOWN:
             self.points=0
             return
-
-
-  
-  ### below are some sample loop states ###
-
-  def menuloop(self):
-    pass
-      #event loop
-
-      #update data
-
-      #redraw
-      
-  def gameloop(self):
-    pass
-      #event loop
-
-      #update data
-
-      #redraw
-    
-  def gameoverloop(self):
-    pass
-      #event loop
-
-      #update data
-
-      #redraw
